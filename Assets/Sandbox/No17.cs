@@ -5,12 +5,19 @@ namespace Ns17
 {
     public class No17 : MonoBehaviour
     {
-        // Start is called before the first frame update
+        /// <summary>
+        /// 出席番号を返すメソッド
+        /// </summary>
+        /// <returns>出席番号</returns>
+        public int Call()
+        {
+            return 17;
+        }
         void Start()
         {
             Debug.Log("No17");
         }
-        // Update is called once per frame
+      
         void Update()
         {
 
