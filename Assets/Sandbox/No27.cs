@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace No27
+namespace Ns27
 {
+
+
+    /// <summary>
+    /// /©•ª‚ÌoÈ”Ô†‚ğ•Ô‚·ƒNƒ‰ƒX
+    /// </summary>
     public class No27 : MonoBehaviour
     {
-        // Start is called before the first frame update
+        public int Call()
+        {
+            return 27;
+        }
         void Start()
         {
             Debug.Log("No27");
