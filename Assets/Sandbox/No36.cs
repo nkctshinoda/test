@@ -7,6 +7,10 @@ namespace Ns36
 
     public class No36 : MonoBehaviour
     {
+        public int Call()
+        {
+            return 36;
+        }
         // Start is called before the first frame update
         void Start()
         {
