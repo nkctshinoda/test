@@ -6,6 +6,11 @@ namespace Ns03
 {
     public class No03 : MonoBehaviour
     {
+
+       public int Call()
+        {
+            return 03;
+        }
         // Start is called before the first frame update
         void Start()
         {
