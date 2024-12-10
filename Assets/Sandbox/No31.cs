@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ns18
+namespace Ns31
 {
-    public class No18 : MonoBehaviour
+
+    public class No31 : MonoBehaviour
     {
+        /// <summary>
+        /// 出席番号を返すクラス
+        /// </summary>
+        /// <returns>出席番号</returns>
         public int Call()
         {
-            return 18;
+            return 31;
         }
         // Start is called before the first frame update
         void Start()
