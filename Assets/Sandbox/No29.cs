@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ns20
+namespace Ns29
 {
-    public class No20 : MonoBehaviour
+    public class No29 : MonoBehaviour
     {
-        // Start is called before the first frame update
         void Start()
         {
-            Debug.Log("20");
+            Debug.Log("29");
         }
 
         public int call()
         {
-            return 20;
+            return 29;
         }
-        // Update is called once per frame
+
         void Update()
         {
 

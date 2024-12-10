@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace Ns18
 {
-
-
     public class No18 : MonoBehaviour
     {
+        public int Call()
+        {
+            return 18;
+        }
         // Start is called before the first frame update
         void Start()
         {
