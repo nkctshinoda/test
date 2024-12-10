@@ -6,6 +6,10 @@ namespace Ns26
 {
     public class No26 : MonoBehaviour
     {
+        public int Call()
+        {
+            return 26;
+        }
         // Start is called before the first frame update
         void Start()
         {
