@@ -6,10 +6,19 @@ namespace Ns16
 {
     public class No16 : MonoBehaviour
     {
-       // Start is called before the first frame update
+
+        /// <summary>
+        /// 自分の出席番号を返すクラス
+        /// </summary>
+       // <returns>出席番号</returns>
+
+       public int Call()
+        {
+            return 16;
+        }
        void Start()
        {
-            Debug.Log("No16");
+           
        }
 
        // Update is called once per frame
