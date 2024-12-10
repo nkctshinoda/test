@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Ns04
+
 {
 
 
     public class No04 : MonoBehaviour
     {
-       public int Call()
+        public int Call()
         {
             return 04;
         }
