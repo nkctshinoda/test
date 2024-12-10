@@ -2,23 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ns31
+
+namespace Ns24
 {
-    public class No31 : MonoBehaviour
+    public class No24 : MonoBehaviour
     {
-        /// <summary>
-        /// 自分の出席番号を返すクラス
-        /// </summary>
-        /// <returns>出席番号</returns>
         public int Call()
         {
-            return 31;
+            return 24;
         }
 
         // Start is called before the first frame update
-        private void Start()
+        void Start()
         {
-            
+
         }
 
         // Update is called once per frame

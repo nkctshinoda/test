@@ -1,28 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Ns27
+
+public class No27 : MonoBehaviour
 {
-
-
-    /// <summary>
-    /// /é©ï™ÇÃèoê»î‘çÜÇï‘Ç∑ÉNÉâÉX
-    /// </summary>
-    public class No27 : MonoBehaviour
+    // Start is called before the first frame update
+    void Start()
     {
-        public int Call()
-        {
-            return 27;
-        }
-        void Start()
-        {
-            Debug.Log("No27");
-        }
-        // Update is called once per frame
-        void Update()
-        {
+        
+    }
 
-        }
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
-

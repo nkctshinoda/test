@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ns36
+namespace Ns04
+
 {
 
-    public class No36 : MonoBehaviour
+
+    public class No04 : MonoBehaviour
     {
         public int Call()
         {
-            return 36;
+            return 04;
         }
         // Start is called before the first frame update
         void Start()
         {
-            Debug.Log("No36");
+
         }
 
         // Update is called once per frame
