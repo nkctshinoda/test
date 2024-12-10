@@ -6,13 +6,18 @@ namespace Ns30
 {
     public class No30 : MonoBehaviour
     {
-        // Start is called before the first frame update
+        /// <summary>
+        /// ©•ª‚ÌoÈ”Ô†‚ğ•Ô‚·
+        /// </summary>
+        /// <returns>oÈ”Ô†</returns>
+        public int Call() 
+        {
+            return 30;
+        } 
         void Start()
         {
             Debug.Log("No30");
         }
-
-        // Update is called once per frame
         void Update()
         {
 
