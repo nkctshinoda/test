@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace No02
+namespace Ns02
 {
     public class No02 : MonoBehaviour
     {
