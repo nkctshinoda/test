@@ -7,6 +7,10 @@ namespace Ns34
     //??????????????
     public class No34 : MonoBehaviour
     {
+        public int call()
+        {
+            return 34;
+        }
         // Start is called before the first frame update
         void Start()
         {
