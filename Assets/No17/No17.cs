@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class No17 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Vector2 pos;
+    bool flg;
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(pos.x <= -11)flg = true;
+        if(pos.x >= 11)flg = false;
+        if(!flg)
+        {
+            pos.x -= 1 * Time.deltaTime*2;
+            pos.y -= 0.41f * Time.deltaTime*2;
+        }
+        else 
+        {
+            pos.x += 1 * Time.deltaTime*2;
+            pos.y += 0.41f * Time.deltaTime*2;
+        }
+        transform.position = pos;
     }
 }
