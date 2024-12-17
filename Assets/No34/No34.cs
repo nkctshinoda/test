@@ -18,7 +18,7 @@ public class No34 : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(yoko, tate,0);
-        if (transform.position.x > 10.5f || transform.position.x < -10.5f) yoko *= -1f;
+        if (transform.position.x > 4.5f || transform.position.x < -4.5f) yoko *= -1f;
         if(transform.position.y > 4.5f || transform.position.y < -4.5f)tate *= -1f;
         if(Input.GetMouseButtonDown(0))
         {
