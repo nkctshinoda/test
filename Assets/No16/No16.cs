@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class No16 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float width = 3f;
+    public float heidht = 2f;
+    public float speed = 2f;
 
-    // Update is called once per frame
-    void Update()
+    private float time = 0f;
+
+    private void Update()
     {
-        
+        time += Time.deltaTime * speed;
+        float x = Mathf.Sin(time) * width;
+        float y = Mathf.Sin(2 * time) * heidht / 2;
+        transform.position = new Vector3(x, y, 0f);
     }
 }
