@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class No02 : MonoBehaviour
 {
-    float Hor = 2;
-    float Ver = -1;
-    float speed = 5;
+    float MaxX = 8f;
+    float MinX = -8f;
+    float MaxY = 4.5f;
+    float MinY = -4.5f;
+    Vector2 pos;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,7 @@ public class No02 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3 (Hor,Ver,0) * speed * Time.deltaTime);
+        pos = new Vector2 (Random.Range(MinX,MaxX),Random.Range(MinY,MaxY));
+        transform.position = pos;
     }
 }
