@@ -1,29 +1,29 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /*
- * ƒNƒ‰ƒX–¼‚ÌÕ“Ë‚È‚Ç‚ğ–h‚®‚½‚ßnamespace‚ğg‚¤
- * ”h¶ƒNƒ‰ƒX‚Åoverride‚·‚éƒƒ\ƒbƒh‚ÍvirtualƒL[ƒ[ƒh‚ğ‚Â‚¯‚Ä‰¼‘zƒƒ\ƒbƒh‚É‚µ‚Ä‚¨‚­
- * private‚É‚·‚×‚«ƒƒ\ƒbƒh‚ğ”h¶ƒNƒ‰ƒX‚©‚ç‚Å‚àƒAƒNƒZƒX‚Å‚«‚é‚æ‚¤‚Éprotected‚É‚µ‚Ä‚¨‚­
+ * ã‚¯ãƒ©ã‚¹åã®è¡çªãªã©ã‚’é˜²ããŸã‚namespaceã‚’ä½¿ã†
+ * æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã§overrideã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ã¯virtualã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’ã¤ã‘ã¦ä»®æƒ³ãƒ¡ã‚½ãƒƒãƒ‰ã«ã—ã¦ãŠã
+ * privateã«ã™ã¹ããƒ¡ã‚½ãƒƒãƒ‰ã‚’æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã‹ã‚‰ã§ã‚‚ã‚¢ã‚¯ã‚»ã‚¹ã§ãã‚‹ã‚ˆã†ã«protectedã«ã—ã¦ãŠã
  */
 
 namespace SSShooter
 {
     /// <summary>
-    /// “GƒLƒƒƒ‰ƒNƒ^[‚ÌŠî’êƒNƒ‰ƒX
+    /// æ•µã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®åŸºåº•ã‚¯ãƒ©ã‚¹
     /// </summary>
     public class EnemyBase : MonoBehaviour
     {
-        // --- ‘®« ---
-        public int hp;                // ‘Ì—Í
-        public int score;             // “|‚µ‚½‚ÌƒXƒRƒA
+        // --- å±æ€§ ---
+        public int hp;                // ä½“åŠ›
+        public int score;             // å€’ã—ãŸæ™‚ã®ã‚¹ã‚³ã‚¢
 
-        // --- ‘€ì ---
-        // ‰Šú‰»ˆ—
+        // --- æ“ä½œ ---
+        // åˆæœŸåŒ–å‡¦ç†
         public virtual void Initialize()
         {
         }
 
-        // ”í’eˆ—
+        // è¢«å¼¾å‡¦ç†
         public virtual void TakeDamage(int damage)
         {
             hp -= damage;
@@ -33,10 +33,10 @@ namespace SSShooter
             }
         }
 
-        // €–Sˆ—
+        // æ­»äº¡å‡¦ç†
         protected virtual void Die()
         {
-            // ƒXƒRƒA‰ÁZˆ—‚È‚Ç‚ğ‚±‚±‚É‹Lq
+            // ã‚¹ã‚³ã‚¢åŠ ç®—å‡¦ç†ãªã©ã‚’ã“ã“ã«è¨˜è¿°
             Destroy(gameObject);
         }
     }
