@@ -1,27 +1,27 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /*
- * ƒNƒ‰ƒX–¼‚ÌÕ“Ë‚È‚Ç‚ğ–h‚®‚½‚ßnamespace‚ğg‚¤
- * ”h¶ƒNƒ‰ƒX‚Åoverride‚·‚éƒƒ\ƒbƒh‚ÍvirtualƒL[ƒ[ƒh‚ğ‚Â‚¯‚Ä‰¼‘zƒƒ\ƒbƒh‚É‚µ‚Ä‚¨‚­
- * private‚É‚·‚×‚«ƒƒ\ƒbƒh‚ğ”h¶ƒNƒ‰ƒX‚©‚ç‚Å‚àƒAƒNƒZƒX‚Å‚«‚é‚æ‚¤‚Éprotected‚É‚µ‚Ä‚¨‚­
- * Moveƒƒ\ƒbƒh‚Í’ŠÛƒNƒ‰ƒX‚Æ‚µ”h¶ƒNƒ‰ƒX‚ÅÀ‘•‚·‚é
+ * ã‚¯ãƒ©ã‚¹åã®è¡çªãªã©ã‚’é˜²ããŸã‚namespaceã‚’ä½¿ã†
+ * æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã§overrideã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ã¯virtualã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’ã¤ã‘ã¦ä»®æƒ³ãƒ¡ã‚½ãƒƒãƒ‰ã«ã—ã¦ãŠã
+ * privateã«ã™ã¹ããƒ¡ã‚½ãƒƒãƒ‰ã‚’æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã‹ã‚‰ã§ã‚‚ã‚¢ã‚¯ã‚»ã‚¹ã§ãã‚‹ã‚ˆã†ã«protectedã«ã—ã¦ãŠã
+ * Moveãƒ¡ã‚½ãƒƒãƒ‰ã¯æŠ½è±¡ã‚¯ãƒ©ã‚¹ã¨ã—æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã§å®Ÿè£…ã™ã‚‹
  */
 
 namespace SSShooter
 {
     /// <summary>
-    /// “G‚ÌˆÚ“®ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÌŠî’êƒNƒ‰ƒX
+    /// æ•µã®ç§»å‹•ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®åŸºåº•ã‚¯ãƒ©ã‚¹
     /// </summary>
     public abstract class EnemyMovementBase : MonoBehaviour
     {
-        protected float speed;          //‘¬“x
-        protected Vector2 direction;    //•ûŒü
+        protected float speed;          //é€Ÿåº¦
+        protected Vector2 direction;    //æ–¹å‘
 
         /// <summary>
-        /// ‰Šú‰»ƒƒ\ƒbƒh
+        /// åˆæœŸåŒ–ãƒ¡ã‚½ãƒƒãƒ‰
         /// </summary>
-        /// <param name="spd">‘¬“x</param>
-        /// <param name="dir">•ûŒü</param>
+        /// <param name="spd">é€Ÿåº¦</param>
+        /// <param name="dir">æ–¹å‘</param>
 
         protected virtual void Initialize(float spd, Vector2 dir)
         {
@@ -30,12 +30,12 @@ namespace SSShooter
         }
 
         /// <summary>
-        /// ˆÚ“®ƒƒ\ƒbƒhi’ŠÛƒƒ\ƒbƒhj
+        /// ç§»å‹•ãƒ¡ã‚½ãƒƒãƒ‰ï¼ˆæŠ½è±¡ãƒ¡ã‚½ãƒƒãƒ‰ï¼‰
         /// </summary>
         public abstract void Move();
 
         /// <summary>
-        /// ƒI[ƒo[ƒ‰ƒCƒh‰Â”\‚ÈStart
+        /// ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰å¯èƒ½ãªStart
         /// </summary>
         protected virtual void Start()
         {
@@ -43,7 +43,7 @@ namespace SSShooter
         }
 
         /// <summary>
-        /// ƒI[ƒo[ƒ‰ƒCƒh‰Â”\‚ÈUpdate
+        /// ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰å¯èƒ½ãªUpdate
         /// </summary>
         protected virtual void Update()
         {
