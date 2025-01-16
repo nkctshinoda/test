@@ -11,6 +11,12 @@ namespace SSShooter
         {
             Vector3 moveDir = direction;
             transform.position += moveDir * speed * Time.deltaTime;
+            if (time > 0.5) { Initialize(5f, Vector2.down); }
+            if (time > 1)   { Initialize(3f, Vector2.left); }
+            if (time > 1.5) { Initialize(5f, Vector2.up);   }
+            if (time > 2.5) { Initialize(3f, Vector2.left); }
+            if (time > 3)   { Initialize(5f, Vector2.down);
+                              time = 0;                     }
         }
 
         protected override void Start()
@@ -22,13 +28,6 @@ namespace SSShooter
         {
             base.Update();
             time += Time.deltaTime;
-            if (time >0.5) { Initialize(5f, Vector2.down); }
-            if (time >1)   { Initialize(3f, Vector2.left); }
-            if (time >1.5) { Initialize(5f, Vector2.up);   }
-            if (time >2.5) { Initialize(3f, Vector2.left); }
-            if (time >3)   { Initialize(5f, Vector2.down);
-                             time = 0;                     }
-
         }
     }
 }
