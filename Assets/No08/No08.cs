@@ -1,15 +1,15 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class No08 : MonoBehaviour
 {
-    public float speed = 5f; // ˆÚ“®‘¬“x
-    private Vector2 direction = new Vector2(1, 1).normalized; // ‰ŠúˆÚ“®•ûŒüi‰Eãj
+    public float speed = 5f; // ç§»å‹•é€Ÿåº¦
+    private Vector2 direction = new Vector2(1, 1).normalized; // åˆæœŸç§»å‹•æ–¹å‘ï¼ˆå³ä¸Šï¼‰
 
     private float screenLeft, screenRight, screenTop, screenBottom;
 
     void Start()
     {
-        // ƒJƒƒ‰‚Ì’[‚ÌÀ•W‚ğæ“¾
+        // ã‚«ãƒ¡ãƒ©ã®ç«¯ã®åº§æ¨™ã‚’å–å¾—
         Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0));
         Vector3 topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
 
@@ -21,27 +21,27 @@ public class No08 : MonoBehaviour
 
     void Update()
     {
-        // ƒIƒuƒWƒFƒNƒg‚ğˆÚ“®
+        // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç§»å‹•
         transform.Translate(direction * speed * Time.deltaTime);
 
-        // Œ»İ‚ÌÀ•W‚ğæ“¾
+        // ç¾åœ¨ã®åº§æ¨™ã‚’å–å¾—
         Vector3 position = transform.position;
 
-        // X•ûŒü‚Ì’µ‚Ë•Ô‚èˆ—
+        // Xæ–¹å‘ã®è·³ã­è¿”ã‚Šå‡¦ç†
         if (position.x < screenLeft || position.x > screenRight)
         {
-            direction.x = -direction.x; // X•ûŒü‚ÌˆÚ“®”½“]
-            position.x = Mathf.Clamp(position.x, screenLeft, screenRight); // ‰æ–ÊŠO‚Éo‚È‚¢‚æ‚¤‚É•â³
+            direction.x = -direction.x; // Xæ–¹å‘ã®ç§»å‹•åè»¢
+            position.x = Mathf.Clamp(position.x, screenLeft, screenRight); // ç”»é¢å¤–ã«å‡ºãªã„ã‚ˆã†ã«è£œæ­£
         }
 
-        // Y•ûŒü‚Ì’µ‚Ë•Ô‚èˆ—
+        // Yæ–¹å‘ã®è·³ã­è¿”ã‚Šå‡¦ç†
         if (position.y < screenBottom || position.y > screenTop)
         {
-            direction.y = -direction.y; // Y•ûŒü‚ÌˆÚ“®”½“]
-            position.y = Mathf.Clamp(position.y, screenBottom, screenTop); // ‰æ–ÊŠO‚Éo‚È‚¢‚æ‚¤‚É•â³
+            direction.y = -direction.y; // Yæ–¹å‘ã®ç§»å‹•åè»¢
+            position.y = Mathf.Clamp(position.y, screenBottom, screenTop); // ç”»é¢å¤–ã«å‡ºãªã„ã‚ˆã†ã«è£œæ­£
         }
 
-        // ”½‰f
+        // åæ˜ 
         transform.position = position;
     }
 }

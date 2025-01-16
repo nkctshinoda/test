@@ -5,6 +5,7 @@ namespace SSShooter
 {
     public class E40 : EnemyMovementBase
     {
+        float groundLevel = -1f;
         public override void Move()
         {
             Vector3 moveDir = direction;

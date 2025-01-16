@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace SSShooter
@@ -15,11 +15,11 @@ namespace SSShooter
             Vector3 moveDir = direction;
             transform.position += moveDir * speed * Time.deltaTime;
 
-            /// ‰æ–Ê’[‚Å’µ‚Ë•Ô‚éˆ—
+            /// ç”»é¢ç«¯ã§è·³ã­è¿”ã‚‹å‡¦ç†
            
             if (transform.position.y <= screenBottom || transform.position.y >= screenTop)
             {
-                direction.y = -direction.y; // Y•ûŒü‚ğ”½“]
+                direction.y = -direction.y; // Yæ–¹å‘ã‚’åè»¢
             };
         }
         // Start is called before the first frame update

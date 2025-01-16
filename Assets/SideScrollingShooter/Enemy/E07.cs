@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,12 +10,12 @@ namespace SSShooter
         public override void Move()
         {
             Vector3 moveDir = direction;
-            // OŠp”g‚Ì“®‚«‚ğ‰Á‚¦‚éiY²‚É PingPong ‚ğ“K—pj
-            float waveAmplitude = 0.5f;  // ”g‚ÌU•iã‰º‚Ì”ÍˆÍj
-            float waveSpeed = 2f;        // ”g‚Ì‘¬‚³
+            // ä¸‰è§’æ³¢ã®å‹•ãã‚’åŠ ãˆã‚‹ï¼ˆYè»¸ã« PingPong ã‚’é©ç”¨ï¼‰
+            float waveAmplitude = 0.5f;  // æ³¢ã®æŒ¯å¹…ï¼ˆä¸Šä¸‹ã®ç¯„å›²ï¼‰
+            float waveSpeed = 2f;        // æ³¢ã®é€Ÿã•
             float waveOffset = Mathf.PingPong(Time.time * waveSpeed, waveAmplitude * 2) - waveAmplitude;
 
-            // X•ûŒü‚ÌˆÚ“®‚ÉOŠp”g‚Ì“®‚«‚ğ‰Á‚¦‚é
+            // Xæ–¹å‘ã®ç§»å‹•ã«ä¸‰è§’æ³¢ã®å‹•ãã‚’åŠ ãˆã‚‹
             moveDir.y += waveOffset;
             transform.position += moveDir * speed * Time.deltaTime;
         }

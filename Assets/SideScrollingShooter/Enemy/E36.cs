@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace SSShooter {
@@ -7,7 +7,7 @@ namespace SSShooter {
     {
         public float moveSpeed = 3.0f;
 
-        // ˆÚ“®‚·‚é•ûŒüiã‰º¶‰Ej
+        // ç§»å‹•ã™ã‚‹æ–¹å‘ï¼ˆä¸Šä¸‹å·¦å³ï¼‰
         private Vector3 targetPosition;
         private Vector3 startPosition;
         public override void Move()
@@ -21,7 +21,7 @@ namespace SSShooter {
             Initialize(1f, Vector2.left);
             startPosition = transform.position;
 
-            // ‰Šú‚Ì–Ú•WˆÊ’u‚ğİ’è
+            // åˆæœŸã®ç›®æ¨™ä½ç½®ã‚’è¨­å®š
             SetRandomTarget();
         }
 
@@ -31,7 +31,7 @@ namespace SSShooter {
             base.Update();
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-            // –Ú•WˆÊ’u‚É“’B‚µ‚½‚çV‚µ‚¢–Ú•W‚ğİ’è
+            // ç›®æ¨™ä½ç½®ã«åˆ°é”ã—ãŸã‚‰æ–°ã—ã„ç›®æ¨™ã‚’è¨­å®š
             if (transform.position == targetPosition)
             {
                 SetRandomTarget();
@@ -39,25 +39,25 @@ namespace SSShooter {
         }
         void SetRandomTarget()
         {
-            // ã‰º¶‰E‚Ìƒ‰ƒ“ƒ_ƒ€‚È•ûŒü‚ğ‘I‘ğ
+            // ä¸Šä¸‹å·¦å³ã®ãƒ©ãƒ³ãƒ€ãƒ ãªæ–¹å‘ã‚’é¸æŠ
             int direction = Random.Range(0, 4);
 
             switch (direction)
             {
                 case 0:
-                    // ã‚ÉˆÚ“®
+                    // ä¸Šã«ç§»å‹•
                     targetPosition = startPosition + Vector3.up * 5.0f;
                     break;
                 case 1:
-                    // ‰º‚ÉˆÚ“®
+                    // ä¸‹ã«ç§»å‹•
                     targetPosition = startPosition + Vector3.down * 5.0f;
                     break;
                 case 2:
-                    // ¶‚ÉˆÚ“®
+                    // å·¦ã«ç§»å‹•
                     targetPosition = startPosition + Vector3.left * 5.0f;
                     break;
                 case 3:
-                    // ‰E‚ÉˆÚ“®
+                    // å³ã«ç§»å‹•
                     targetPosition = startPosition + Vector3.right * 5.0f;
                     break;
             }

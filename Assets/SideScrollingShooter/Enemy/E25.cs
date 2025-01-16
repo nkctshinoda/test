@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,14 +6,14 @@ namespace SSShooter
 {
     public class E25 : EnemyMovementBase
     {
-        public float rotationSpeed = 100f; // ‰ñ“]‘¬“x‚ğ’Ç‰Á
+        public float rotationSpeed = 100f; // å›è»¢é€Ÿåº¦ã‚’è¿½åŠ 
 
         public override void Move()
         {
             Vector3 moveDir = direction;
             transform.position += moveDir * speed * Time.deltaTime;
 
-            // ‰ñ“]ˆ—‚ğ’Ç‰Á
+            // å›è»¢å‡¦ç†ã‚’è¿½åŠ 
             transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
         }
 

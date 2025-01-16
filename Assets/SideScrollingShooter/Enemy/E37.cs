@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace SSShooter
 {
     public class E37 : EnemyMovementBase
     {
-        // ƒvƒŒƒCƒ„[‚ÌˆÊ’u
+        // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ä½ç½®
         [SerializeField] Transform player;
 
         public override void Move()
@@ -17,7 +17,7 @@ namespace SSShooter
             posE.x += (posP.x - posE.x) * 0.01f;
             posE.y += (posP.y - posE.y) * 0.01f;
 
-            // “G‚ÌˆÊ’u‚É‘ã“ü
+            // æ•µã®ä½ç½®ã«ä»£å…¥
             transform.position = posE;
 
 

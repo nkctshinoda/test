@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Callbacks;
@@ -12,9 +12,9 @@ namespace SSShooter
 
         public class E04 : EnemyMovementBase
         {
-            public float changeDirectionInterval = 2f; // •ûŒü‚ğ•Ï‚¦‚éŠÔŠu
-            private float timeSinceLastChange = 0f; // ÅŒã‚É•ûŒü‚ğ•ÏX‚µ‚½ŠÔ
-            private Vector3 moveDir; // Œ»İ‚ÌˆÚ“®•ûŒü
+            public float changeDirectionInterval = 2f; // æ–¹å‘ã‚’å¤‰ãˆã‚‹é–“éš”
+            private float timeSinceLastChange = 0f; // æœ€å¾Œã«æ–¹å‘ã‚’å¤‰æ›´ã—ãŸæ™‚é–“
+            private Vector3 moveDir; // ç¾åœ¨ã®ç§»å‹•æ–¹å‘
 
             public override void Move()
             {
@@ -24,7 +24,7 @@ namespace SSShooter
             // Start is called before the first frame update
             protected override void Start()
             {
-                Initialize(1f, GetRandomDirection()); // ƒ‰ƒ“ƒ_ƒ€‚È•ûŒü‚Å‰Šú‰»
+                Initialize(1f, GetRandomDirection()); // ãƒ©ãƒ³ãƒ€ãƒ ãªæ–¹å‘ã§åˆæœŸåŒ–
                 moveDir = direction;
             }
 
@@ -33,7 +33,7 @@ namespace SSShooter
             {
                 base.Update();
 
-                // ŠÔ‚ğŒv‘ª‚µ‚Ä•ûŒü‚ğ•ÏX
+                // æ™‚é–“ã‚’è¨ˆæ¸¬ã—ã¦æ–¹å‘ã‚’å¤‰æ›´
                 timeSinceLastChange += Time.deltaTime;
                 if (timeSinceLastChange >= changeDirectionInterval)
                 {
@@ -45,12 +45,12 @@ namespace SSShooter
             {
                 direction = GetRandomDirection();
                 moveDir = direction;
-                timeSinceLastChange = 0f; // ƒ^ƒCƒ}[ƒŠƒZƒbƒg
+                timeSinceLastChange = 0f; // ã‚¿ã‚¤ãƒãƒ¼ãƒªã‚»ãƒƒãƒˆ
             }
 
             private Vector3 GetRandomDirection()
             {
-                // ƒ‰ƒ“ƒ_ƒ€‚È•ûŒü‚ğ¶¬
+                // ãƒ©ãƒ³ãƒ€ãƒ ãªæ–¹å‘ã‚’ç”Ÿæˆ
                 float randomAngle = Random.Range(0f, 360f);
                 return new Vector3(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad), 0).normalized;
             }
