@@ -9,6 +9,7 @@ namespace SSShooter
         public float rotationRadius = 1f; // 回転半径を適切な値に変更
         public float rotationSpeed = 1f;  // 回転速度
         private float angle = 0f;         // 現在の角度
+        private float randomSpeed;
 
         public override void Move()
         {
@@ -25,7 +26,7 @@ namespace SSShooter
 
             // オブジェクトを更新 (左方向への移動を加味)
             Vector3 moveDir = direction;
-            transform.position += moveDir * speed * Time.deltaTime;
+            transform.position += moveDir * randomSpeed * Time.deltaTime;
 
             // 回転動作を適用
             transform.position += new Vector3(x, y, 0) * Time.deltaTime;
@@ -35,6 +36,7 @@ namespace SSShooter
         protected override void Start()
         {
             Initialize(1f, Vector2.left); // 初期化: 左方向への移動を設定
+            randomSpeed = Random.Range(1f, 20f); // ランダムな速度を設定
         }
 
         // Update is called once per frame
