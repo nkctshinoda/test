@@ -6,12 +6,12 @@ namespace SSShooter
     public class E14 : EnemyMovementBase
     {public override void Move()
         {
-            //Vector3 moveDir = direction;
-            //transform.position += moveDir * speed * Time.deltaTime;
+            Vector3 moveDir = direction;
+            transform.position += moveDir * speed * Time.deltaTime;
 
-            //transform.Rotate(0, 0, 1);
+            transform.Rotate(0, 0, 0.5f);
             // オブジェクトを向いている方向に移動させる
-            transform.position += transform.forward * speed * Time.deltaTime;
+            transform.position += transform.right * (speed*2) * Time.deltaTime;
         }
         // Start is called before the first frame update
         protected override void Start()
