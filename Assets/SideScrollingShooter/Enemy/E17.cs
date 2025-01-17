@@ -9,21 +9,24 @@ namespace SSShooter
         {
             Vector3 moveDir = direction;
             transform.position += moveDir * speed * Time.deltaTime ;
-            Vector3 pos = transform.position;
-            if(pos.x > 4)
+            
+            Camera camera = Camera.main;
+            float border = camera.orthographicSize * 2.2f;
+
+            if(transform.position.x >= border)
             {
-                Initialize(1f, Vector2.left);
+                Initialize(4f, Vector2.left);
             }
-            else if(pos.x < -4)
+            else if(transform.position.x <= -border)
             { 
-                Initialize(1f,Vector2.right);
+                Initialize(4f,Vector2.right);
             }
 
         }
         // Start is called before the first frame update
         protected override void Start()
         {
-            Initialize(1f, Vector2.left);
+            Initialize(4f, Vector2.left);
         }
 
         // Update is called once per frame
