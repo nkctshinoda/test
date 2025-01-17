@@ -8,14 +8,17 @@ namespace SSShooter
         // プレイヤーの位置
         [SerializeField] Transform player;
 
+
         public override void Move()
         {
+            // 敵スピード
+            float speed = 0.01f;
 
             Vector3 posP = player.position;
             Vector3 posE = transform.position;
 
-            posE.x += (posP.x - posE.x) * 0.01f;
-            posE.y += (posP.y - posE.y) * 0.01f;
+            posE.x += (posP.x - posE.x) * speed;
+            posE.y += (posP.y - posE.y) * speed;
 
             // 敵の位置に代入
             transform.position = posE;
